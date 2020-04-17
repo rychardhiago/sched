@@ -1,0 +1,261 @@
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #000000 !important;
+    background-image: url(../imgs/fundo2.jpg) !important;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 120%;
+}
+.bs-dark.navbar-inverse {
+    background-color: #000000;
+    border-color: #080808;
+}
+.bs-dark .navbar-img {padding:5px 6px !important;}
+.bs-dark .navbar-img img {width:40px;}
+.bs-dark .dropdown-menu {
+    min-width: 200px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    background-color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.bs-dark .dropdown-menu .divider {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.bs-dark .dropdown-menu > li > a {
+    padding: 6px 20px;
+    color: rgba(255,255,255,0.80);
+}
+.bs-dark .dropdown-menu > li > a:hover,
+.bs-dark .dropdown-menu > li > a:focus {
+    color: rgba(255,255,255,0.70);
+    text-decoration: none;
+    background-color: transparent;
+}
+.bs-dark .dropdown-menu > .active > a,
+.bs-dark .dropdown-menu > .active > a:hover,
+.bs-dark .dropdown-menu > .active > a:focus {
+    color: rgba(255,255,255,0.70);
+    text-decoration: none;
+    background-color: transparent;
+    outline: 0;
+}
+
+.bs-dark .navbar-form {
+    margin:0;
+    margin-top: 5px;
+    padding:8px 0px;
+}
+
+.bs-dark .navbar-form .search-box {
+    border:0px;
+    height:35px;
+    outline: none;
+    width:320px;
+    padding-right: 3px;
+    padding-left: 15px;
+    margin:4px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+}
+
+.bs-dark .navbar-form button {
+    border: 0;
+    background: none;
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -34px;
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.bs-dark .search-box:focus + button {
+    z-index: 3;
+}
+
+/*-- login --*/
+.modal-body {
+    padding: 15px 38px 30px;
+}
+.login-right input[type="text"] , .login-right input[type="date"] , .login-bottom input[type="date"] , .login-right input[type="password"] ,.login-bottom input[type="text"] ,.login-bottom input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    font-weight: normal;
+    background: none;
+    border: 1px solid #E6E4E4;
+    color: #636262;
+    outline: none;
+    font-size: 14px;
+    margin: 6px 0 17px 0px;
+}
+.login-right input[type="text"]:focus, .login-right input[type="password"]:focus, .login-bottom input[type="text"]:focus, .login-bottom input[type="password"]:focus{
+    border: 1px solid #FDA30E;
+}
+.login-right h4,.login-bottom h4 {
+    color: #000000;
+    font-size: 14px;
+    margin: 0 0 0px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.login-right input[type="submit"],.login-bottom input[type="submit"]{
+    background:#7B7B7B;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    padding: 8px 15px 9px 15px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+.login-right input[type="submit"]:hover,.login-bottom input[type="submit"]:hover {
+
+    background: #FDA30E;
+}
+.modal-dialog {
+    width: 90%;
+    margin: 92px auto 0;
+}
+.modal-header {
+    border-bottom: none;
+}
+.login-right h3 ,.login-bottom h3{
+    color: #FDA30E;
+    font-size: 22px;
+    margin-bottom: 23px;
+}
+.sign-in a {
+    font-size: 12px;
+    color: #A9A9A9;
+    text-decoration: none;
+}
+.sign-in a:hover{
+    color: #FDA30E;
+}
+.single-bottom input[type="checkbox"] {
+    display: none;
+}
+.single-bottom input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 31px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #A9A8A8;
+    font-weight:normal;
+}
+.single-bottom input[type="checkbox"]+label span:first-child {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border:2px solid #FDA30E;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+.single-bottom input[type="checkbox"]:checked+label span:first-child:before {
+    content: "";
+    background:url(../../images/mark1.png)no-repeat;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    font-size: 10px;
+    width:16px;
+    height:16px;
+}
+.single-bottom {
+    margin:14px 0 22px;
+}
+.login-grids p{
+    font-size:13px;
+    text-align:center;
+    margin-top:30px;
+    color:#000;
+}
+.login-grids p a {
+    color: #000;
+    text-decoration: underline;
+}
+.login-grids p a:hover{
+    color: #FDA30E;
+}
+/*-- //login --*/
+
+.user_img img {
+    max-width: 100%;
+    display: block;
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -o-border-radius: 2em;
+}
+
+.imgper{
+    max-height: 100px;
+}
+
+.map iframe{
+    width:90%;
+}
+
+.agendar{
+    padding: 8px;
+    width: 95%;
+    color: #444444;
+}
+
+@media (min-width: 768px) {
+    .bs-dark .dropdown:hover {background-color: #000;}
+    .bs-dark .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    .bs-dark .navbar-form {
+        padding:0px;
+    }
+    .bs-dark .navbar-form .search-box {
+        width:260px;
+        height:32px;
+    }
+
+}
+
+@media (max-width: 414px){
+    .modal-dialog {
+        width: 90%;
+    }
+    .modal-body {
+        padding: 15px 21px 30px;
+    }
+    .login-right input[type="text"], .login-right input[type="password"], .login-bottom input[type="text"], .login-bottom input[type="password"] {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+    .login-grids p {
+        line-height: 1.8em;
+    }
+    .login-right h3, .login-bottom h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 320px){
+    .modal-body {
+        padding: 0px 18px 13px;
+    }
+    .modal-dialog {
+        margin: 70px auto 0;
+    }
+}

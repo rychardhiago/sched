@@ -1,0 +1,91 @@
+<%
+	var i = 0;
+	var contador=0;
+	var dia = 0;
+	var h = '';
+	var margin = 0;
+	var divclass = '';
+	var top = '';
+	var entrou = 0;
+	var add = false;
+	var menorhr = 23;
+	var diassem = ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'];
+    var diasmes = [];
+	var horarios = ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00'];
+
+_.each(events, function(event){
+	var menor = parseInt(event.start_hour.substring(0, event.start_hour.indexOf(':')),0);
+
+	if(menorhr > menor){
+		menorhr = menor;
+	}
+
+
+		diasmes[0] = event.filtroStart0;
+		diasmes[1] = event.filtroStart1;
+		diasmes[2] = event.filtroStart2;
+		diasmes[3] = event.filtroStart3;
+		diasmes[4] = event.filtroStart4;
+		diasmes[5] = event.filtroStart5;
+		diasmes[6] = event.filtroStart6;
+
+});
+
+
+	if(menorhr < 8){
+		horarios = ['07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00'];
+	}
+
+_.each(events, function(event){
+	if((dia != event.start_day) && (i > 0)){
+		i = 0;
+		contador = 0;
+	}
+	margin = (event.start_day * 15);
+	if(margin > 88){
+		margin = 88;
+	}
+
+	if(divclass != event.start_hour.substring(0, event.start_hour.indexOf(':'))){
+		divclass = event.start_hour.substring(0, event.start_hour.indexOf(':'));
+		if(entrou < 4){
+			add = true;
+		}
+		entrou = 0;
+	}
+	else{
+		entrou++;
+		add = false;
+	}
+
+	var top = ((divclass - menorhr) * 200);
+
+	if(entrou > 0){
+		top += (entrou * 40);
+	}
+%>
+<div class="cal div-<%= divclass %>" style="margin-top:<%= top %>px; margin-left: <%= margin %>%;">
+	<div class="cal-cell<%= event.days%> cal-offset<%= event.start_day %> day-highlight dh-<%= event['class'] %>" data-event-class="<%= event['class'] %>">
+		<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>" class="cal-event-week event<%= event.id %>" data-toggle="tooltip" title="<%= event.start_hour %> - <%= event.end_hour %> <%= event.title %>"><%= event.start_hour %> - <%= event.title %></a>
+	</div>
+</div>
+<% i = i + 40; contador++; dia = event.start_day; if(( contador > h ) && ( contador > 0)){ h=contador; } }); %>
+
+
+<% for ( j = 0; j < diassem.length; j++ ) {
+	margin = (j * 15);
+	if(margin > 88){
+		margin = 88;
+	}
+
+	for ( r = 0; r < horarios.length; r++ ) {
+%>
+		<div class="cal" style="margin-top:<%= ((r * 200) - 40) %>px; margin-left: <%= margin %>%;">
+			<div class=" ">
+				<a href="#" onclick="addhorario(this)" class="addhorario" data-dia="<%= diasmes[j].date %>" data-horario="<%= horarios[r] %>" data-toggle="tooltip" title="Adicionar horário <%= diassem[j] %> as <%= horarios[r] %>"><i class="glyphicon glyphicon-plus"></i> <%= diassem[j] %> - <%= horarios[r] %></a>
+			</div>
+		</div>
+<%
+	}
+  }
+%>

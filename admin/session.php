@@ -1,0 +1,1 @@
+<?php    session_name("login_sched"); session_start();    date_default_timezone_set('America/Sao_Paulo');    require_once("classes/class.profissionais.php");    $auth_user = new profissionais();	if(!$auth_user->is_loggedin()){        $auth_user->redirect('index.php');	}?>

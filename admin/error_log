@@ -1,0 +1,5 @@
+[03-Aug-2019 17:05:30 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND profissionais.profissionaiid =  and agendamentos.cancelado = 'N'' at line 1' in /home2/pocod523/public_html/schedapp.com.br/admin/home.php:47
+Stack trace:
+#0 /home2/pocod523/public_html/schedapp.com.br/admin/home.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home2/pocod523/public_html/schedapp.com.br/admin/home.php on line 47
